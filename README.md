@@ -27,8 +27,7 @@ npm run build
 ```
 
 The vault location is set with the `OBSIDIAN_VAULT_PATH` environment variable.
-If unset, it defaults to `D:\SecondBrainData` on Windows or `~/Obsidian`
-elsewhere.
+If unset, it defaults to `~/Obsidian`.
 
 ## Configure in an MCP client
 
@@ -39,9 +38,9 @@ Add to your client's MCP config (example for a stdio client):
   "mcpServers": {
     "obsidian": {
       "command": "node",
-      "args": ["D:\\obsidian-mcp-server\\dist\\index.js"],
+      "args": ["/path/to/obsidian-mcp-server/dist/index.js"],
       "env": {
-        "OBSIDIAN_VAULT_PATH": "D:\\SecondBrainData"
+        "OBSIDIAN_VAULT_PATH": "/path/to/your/vault"
       }
     }
   }

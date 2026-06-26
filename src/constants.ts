@@ -1,11 +1,8 @@
 import path from "node:path";
 import os from "node:os";
 
-// Vault root. Configure with OBSIDIAN_VAULT_PATH; falls back to a sensible default.
-const DEFAULT_VAULT =
-  process.platform === "win32"
-    ? "D:\\SecondBrainData"
-    : path.join(os.homedir(), "Obsidian");
+// Vault root. Configure with OBSIDIAN_VAULT_PATH; falls back to ~/Obsidian.
+const DEFAULT_VAULT = path.join(os.homedir(), "Obsidian");
 
 export const VAULT_PATH = path.resolve(
   process.env.OBSIDIAN_VAULT_PATH || DEFAULT_VAULT
